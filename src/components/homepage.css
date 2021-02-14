@@ -1,0 +1,12 @@
+.form_style {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  background-color: aqua;
+}
+.form_style div {
+  margin: 10px;
+}

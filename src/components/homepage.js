@@ -58,7 +58,10 @@ class Homepage extends React.Component {
       "https://todolist-json-mocker.herokuapp.com/edunomics__Data",
       requestOptions
     )
-      .then((response) => console.log(response))
+      .then((response) => response.json())
+      .then((res) => {
+        console.log(res);
+      })
       .catch((err) => console.log("There is some Error"));
   };
 
@@ -76,7 +79,7 @@ class Homepage extends React.Component {
           <div>
             River Velocity :
             <input
-              type="text"
+              type="number"
               value={River_velocity}
               name="River_velocity"
               onChange={this.handlechange}
@@ -86,7 +89,7 @@ class Homepage extends React.Component {
           <div>
             Person Velocity :
             <input
-              type="text"
+              type="number"
               value={Person_velocity}
               name="Person_velocity"
               onChange={this.handlechange}
@@ -96,7 +99,7 @@ class Homepage extends React.Component {
           <div>
             Angle of Swim :
             <input
-              type="text"
+              type="number"
               value={Angle_of_swim}
               name="Angle_of_swim"
               onChange={this.handlechange}
@@ -106,7 +109,7 @@ class Homepage extends React.Component {
           <div>
             Width of River :
             <input
-              type="text"
+              type="number"
               value={width_of_river}
               name="width_of_river"
               onChange={this.handlechange}
